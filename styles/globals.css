@@ -1,4 +1,40 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Prompt;
+  }
+  main {
+    @apply mt-14 w-full items-center justify-center flex flex-col;
+  }
+  section {
+    @apply mt-14 w-[95%] lg:w-[80%] xl:w-[70%] transition-all duration-300;
+  }
+}
+
+@layer components {
+  .bonsaiHeader {
+    @apply fixed top-0 left-0 z-50 w-full  drop-shadow flex mx-auto py-3 justify-center;
+  }
+  .bonsaiHeaderLink {
+    @apply font-light text-gray-700 hover:opacity-70 cursor-pointer transition duration-300;
+  }
+  .bonsaiFooter {
+    @apply w-full   drop-shadow flex mx-auto py-3  justify-center;
+  }
+  .bonsaiFooterLink {
+    @apply cursor-pointer hover:opacity-70 transition duration-100;
+  }
+  .bonsaiLiQuestion {
+    @apply flex justify-between cursor-pointer  items-center hover:text-emerald-500 transition duration-200;
+  }
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -13,4 +49,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */
