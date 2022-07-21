@@ -2,6 +2,11 @@ import { BiBuoy } from 'react-icons/bi'
 import Link from 'next/Link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { useEffect, useState } from 'react'
+import {
+  IoCheckmarkOutline,
+  IoChevronForward,
+  IoChevronDownSharp,
+} from 'react-icons/io5'
 
 type Props = {}
 
@@ -28,9 +33,9 @@ function Header({}: Props) {
     <header
       className={`${
         isScrolled && 'bg-white'
-      } bonsaiHeader transition-all duration-300`}
+      } bonsaiHeader transition-all duration-300 `}
     >
-      <div className="flex w-[95%] lg:w-[80%] xl:w-[70%]  justify-between items-center space-x-1 transition-all duration-300">
+      <div className="flex  w-[95%] lg:w-[80%] xl:w-[70%]  justify-between items-center space-x-1 transition-all duration-300">
         <div className=" text-emerald-500 cursor-pointer ">
           <Link href="/bonsai">
             <a className="font-semibold text-lg xl:text-2xl pb-1 flex justify-end items-center gap-1 hover:opacity-70 ">
@@ -39,9 +44,15 @@ function Header({}: Props) {
             </a>
           </Link>
         </div>
-        <div className="hidden lg:flex space-x-8">
-          <p className="bonsaiHeaderLink">Product</p>
-          <p className="bonsaiHeaderLink">Trmplates</p>
+        <div className="hidden lg:flex space-x-14">
+          <p className="bonsaiHeaderLink">
+            Product
+            <IoChevronDownSharp className="text-gray-400" />
+          </p>
+          <p className="bonsaiHeaderLink">
+            Trmplates
+            <IoChevronDownSharp className="text-gray-400" />
+          </p>
           <a className="bonsaiHeaderLink">Pricing</a>
           <a className="bonsaiHeaderLink">Reviews</a>
         </div>

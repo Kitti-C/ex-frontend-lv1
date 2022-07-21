@@ -14,6 +14,36 @@ function Plans({}: Props) {
   const [monthly, setMonthly] = useState<boolean>(true)
   const monthlyPrice = [{ starter: '24', professional: '39', business: '79' }]
   const yearlyPrice = [{ starter: '17', professional: '32', business: '52' }]
+  const planBusiness = [
+    'Everything in Starter and Professional plus...',
+    'Subcontractor Management',
+    'Hiring Agreement Templates (1099 contracts)',
+    'Subcontractor Onboarding',
+    'Talent Pool',
+    '3 Team Seats (additional seats $9/month)',
+    'Accountant Access',
+    'Connect Multiple Bank Accounts',
+    'Unlimited Subcontractors',
+    'Unlimited Project Collaborators',
+  ]
+
+  const AskedQuestions = (title: string, detail: string) => {
+    const [openDetail, setOpenDetail] = useState(false)
+    return (
+      <div className="space-y-2">
+        <li
+          onClick={() => setOpenDetail(!openDetail)}
+          className="bonsaiLiQuestion"
+        >
+          {title}
+          <IoChevronDownSharp className="text-gray-400" />
+        </li>
+        <div className={`${!openDetail ? 'hidden' : 'block'} px-2`}>
+          <p className="font-light text-base w-[95%] ">{detail}</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="relative  flex flex-col  space-y-10 pb-24 text-gray-700">
@@ -70,9 +100,9 @@ function Plans({}: Props) {
             </div>
 
             <div className="">
-              <ul className="space-y-4 ">
+              <ul className="space-y-4 text-sm xl:text-base">
                 <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
+                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />
                   All Templates
                 </li>
 
@@ -132,7 +162,7 @@ function Plans({}: Props) {
               {!monthly && <p className="text-right">Billed yearly</p>}
             </div>
             <div>
-              <ul className="space-y-4">
+              <ul className="space-y-4 text-sm xl:text-base">
                 <li className="flex items-center gap-1">
                   <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
                   Everything in Starter plus...
@@ -198,48 +228,13 @@ function Plans({}: Props) {
             </div>
 
             <div>
-              <ul className="space-y-4 ">
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Everything in Starter and Professional plus...
-                </li>
-
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Subcontractor Management
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Hiring Agreement Templates (1099 contracts)
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Subcontractor Onboarding
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Talent Pool
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" /> 3
-                  Team Seats (additional seats $9/month)
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Accountant Access
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Connect Multiple Bank Accounts
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Unlimited Subcontractors
-                </li>
-                <li className="flex items-center gap-1">
-                  <IoCheckmarkOutline className="text-emerald-500 h-5 w-5" />{' '}
-                  Unlimited Project Collaborators
-                </li>
+              <ul className="space-y-4 text-sm xl:text-base">
+                {planBusiness.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <IoCheckmarkOutline className="text-emerald-500 h-5 w-5 flex-none" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -360,7 +355,6 @@ function Plans({}: Props) {
           )}
         </div>
       </div>
-
       <div className="mx-1 md:mx-24 space-y-28 ">
         <div className="flex flex-wrap bg-[#f2faff] rounded-md  justify-between items-center px-16  py-20">
           <div className="mb-5 md:mb-0">
@@ -380,23 +374,44 @@ function Plans({}: Props) {
             Frequently Asked Questions
           </p>
 
-          <ul className="text-lg md:text-2xl space-y-4 w-full">
-            <li className="bonsaiLiQuestion">
-              How does the free trial work?{' '}
-              <IoChevronDownSharp className="text-gray-400" />
-            </li>
-            <li className="bonsaiLiQuestion">
-              Can I change plans anytime?{' '}
-              <IoChevronDownSharp className="text-gray-400" />
-            </li>
-            <li className="bonsaiLiQuestion">
-              How do I pause my Bonsai subscription?{' '}
-              <IoChevronDownSharp className="text-gray-400" />
-            </li>
-            <li className="bonsaiLiQuestion">
-              What is your refund policy?{' '}
-              <IoChevronDownSharp className="text-gray-400" />
-            </li>
+          <ul className="text-lg md:text-2xl space-y-6 w-full">
+            {AskedQuestions(
+              'How does the free trial work?',
+              ` When you start your trial with Bonsai you'll receive full,
+                unlimited access to all of Bonsai's Workflow or Workflow Plus
+                Features! You will need to enter your credit card information to
+                begin your trial, but don't worry - we won't charge you anything
+                until the subscription ends! If you wish to cancel at any time
+                during the trial period, you can do so through your
+                Subscriptions Settings Page.`
+            )}
+            {AskedQuestions(
+              'Can I change plans anytime?',
+              ` Yes, you can from within your account. If you have already
+                subscribed to a plan, or want to downgrade or upgrade your
+                current one, you can do this by going to your "Settings" and
+                "Subscription".`
+            )}
+            {AskedQuestions(
+              'How do I pause my Bonsai subscription?',
+              ` We totally understand that with the nature of freelancing, work
+                ebbs and flows so you might not always need your Bonsai
+                subscription to remain active! The good news is that you can
+                cancel or pause your monthly subscription at any time without
+                penalty. Once cancelled, you'll be able to continue logging in
+                to access all your documents and even continue to use our free
+                features, like Time Tracking! In order to cancel your
+                subscription, login to your Bonsai account.`
+            )}
+            {AskedQuestions(
+              'What is your refund policy?',
+              ` If you contact us within 2 weeks of being charged for your
+                subscription, we will be happy to issue a refund for you!Beyond
+                those 2 weeks, you will need to cancel or modify the
+                subscription from the Subscriptions Tab in Settings to avoid
+                future charges, but refunds will not be issued. This applies to
+                both monthly and annual plans.`
+            )}
           </ul>
         </div>
       </div>

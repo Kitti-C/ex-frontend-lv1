@@ -1,12 +1,31 @@
-import React from 'react'
+import TemplatesSubMenu from './TemplatesSubMenu'
 
 type Props = {}
 
 export default function Footer({}: Props) {
+  //Sub menu templates
+  const invoice = [
+    'Invoice Generator',
+    'Blank Invoice Template',
+    'Consultant Invoice Template',
+  ]
+
+  const proposal = [
+    'Website Proposal Template',
+    'Digital Marketing Proposal Template',
+    'Social Media Marketing Proposal',
+  ]
+
+  const agreement = [
+    'Online Contract',
+    'Graphic Design Contract',
+    'Freelance Contract Template',
+  ]
+
   return (
-    <footer className="bonsaiFooter bg-white text-gray-700 pb-24">
-      <div className="flex flex-col md:flex-row w-[95%] lg:w-[80%] xl:w-[70%] justify-between transition-all  duration-300">
-        <div className="space-y-8 mt-12">
+    <footer className="bonsaiFooter bg-white text-gray-700 pb-48">
+      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-4 w-[95%] lg:w-[80%] xl:w-[70%] justify-between transition-all  duration-300">
+        <div className="space-y-8 mt-12  ">
           <div className="space-y-10">
             <h1 className="font-medium">PRODUCT</h1>
             <ul className="font-light space-y-0.5">
@@ -29,7 +48,7 @@ export default function Footer({}: Props) {
           </div>
         </div>
 
-        <div className="space-y-8 mt-12">
+        <div className="space-y-8 mt-12 ">
           <div className="space-y-10">
             <h1 className="font-medium">FREE RESOURCES</h1>
             <div className="space-y-4 font-light">
@@ -50,13 +69,12 @@ export default function Footer({}: Props) {
               </ul>
             </div>
           </div>
-          <div className="font-light space-y-1.5">
+          <div className="font-light space-y-1.5 ">
             <p className="font-medium">Templates</p>
+            <TemplatesSubMenu menu="Invoice Templates" subMenu={invoice} />
+            <TemplatesSubMenu menu="Proposal Templates" subMenu={proposal} />
+            <TemplatesSubMenu menu="Agreement Templates" subMenu={agreement} />
             <ul className="space-y-0.5">
-              <li className="bonsaiFooterLink">Invoice Templates</li>
-              <li className="bonsaiFooterLink">Proposal Templates</li>
-              <li className="bonsaiFooterLink">Contract Templates</li>
-              <li className="bonsaiFooterLink">Agreement Templates</li>
               <li className="bonsaiFooterLink">Scope of Work Templates</li>
               <li className="bonsaiFooterLink">Quote Templates</li>
               <li className="bonsaiFooterLink">Credit Note Templates</li>
@@ -64,7 +82,7 @@ export default function Footer({}: Props) {
             </ul>
           </div>
         </div>
-        <div className="space-y-8 mt-12">
+        <div className="space-y-8 mt-12  md:pl-20">
           <div className="space-y-10">
             <h1 className="font-medium">BONSAI</h1>
             <div className="space-y-8 font-light">
@@ -85,17 +103,6 @@ export default function Footer({}: Props) {
               <ul>
                 <li className="bonsaiFooterLink">Comparisons</li>
               </ul>
-
-              <div className="group">
-                <span className="font-bold text-gray-700">Admission</span>
-                <div className=" hidden group-hover:block  bg-white  w-auto">
-                  <div className="p-3 hover:bg-gray-200 ">
-                    Admission Process
-                  </div>
-                  <div className="p-3 hover:bg-gray-200">option 1</div>
-                  <div className="p-3 hover:bg-gray-200">option 2</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
