@@ -13,7 +13,7 @@
     @apply mt-14 items-center justify-center flex flex-col;
   }
   section {
-    @apply mt-14 w-[95%] lg:w-[80%] xl:w-[70%] transition-all duration-300;
+    @apply mt-14 w-[90%] lg:w-[80%] xl:w-[70%] transition-all duration-300;
   }
 }
 

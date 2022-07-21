@@ -3,7 +3,6 @@
 }
 
 .main {
-  min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -56,6 +55,13 @@
   font-size: 1.5rem;
 }
 
+.lv {
+  display: flex;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  max-width: 1366px;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;
@@ -70,7 +76,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1366px;
 }
 
 .card {
@@ -82,7 +88,9 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  min-width: 300px;
   max-width: 300px;
+  min-height: 159px;
 }
 
 .card:hover,

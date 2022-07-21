@@ -24,7 +24,7 @@ export default function Footer({}: Props) {
 
   return (
     <footer className="bonsaiFooter bg-white text-gray-700 pb-48">
-      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-4 w-[95%] lg:w-[80%] xl:w-[70%] justify-between transition-all  duration-300">
+      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-4 w-[90%] lg:w-[80%] xl:w-[70%] justify-between transition-all  duration-300">
         <div className="space-y-8 mt-12  ">
           <div className="space-y-10">
             <h1 className="font-medium">PRODUCT</h1>
