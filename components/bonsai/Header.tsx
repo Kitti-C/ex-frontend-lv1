@@ -1,5 +1,5 @@
 import { BiBuoy } from 'react-icons/bi'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { useEffect, useState } from 'react'
 import {
