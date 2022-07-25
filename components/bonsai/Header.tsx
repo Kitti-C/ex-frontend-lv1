@@ -343,8 +343,12 @@ function Header({}: Props) {
               />
             </div>
           </div>
-          <div className="flex flex-col space-y-4 text-gray-600 pb-10">
-            <div className="flex flex-col border-b border-gray-300 cursor-pointer pb-2 px-1 hover:text-gray-900">
+          <div className="flex flex-col  text-gray-600 pb-10">
+            <div
+              className={`${
+                !openProduct && 'border-b border-gray-300 pb-4'
+              } flex flex-col transition duration-300  cursor-pointer   px-1 hover:text-gray-900`}
+            >
               <div
                 onClick={() => setOpenProduct(!openProduct)}
                 className="flex justify-between items-center w-full"
@@ -352,32 +356,36 @@ function Header({}: Props) {
                 <p>Product</p>
                 <IoChevronDownSharp className="h-5 w-5" />
               </div>
-              <div
-                className={`${
-                  !openProduct ? 'h-0 opacity-0 -z-10' : 'h-64'
-                } transition-all duration-500 ease-in-out mt-2 `}
-              >
-                <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
-                  <p>BonsaiWorkflow</p>
-                  <p className="text-xs">
-                    Orgabize your business & look profressional
-                  </p>
-                </div>
-                <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
-                  <p>Bonsai Tax</p>
-                  <p className="text-xs">
-                    Maximize write-offs, and estimate and save for 1099 taxes
-                  </p>
-                </div>
-                <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
-                  <p>Bonsai Cash</p>
-                  <p className="text-xs">
-                    Manage your money with a no-fee business account
-                  </p>
-                </div>
+            </div>
+            <div
+              className={`${
+                !openProduct ? 'h-0 opacity-0 -z-10' : 'h-64'
+              } transition-all duration-500 ease-in-out border-b border-gray-300 `}
+            >
+              <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
+                <p>BonsaiWorkflow</p>
+                <p className="text-xs">
+                  Orgabize your business & look profressional
+                </p>
+              </div>
+              <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
+                <p>Bonsai Tax</p>
+                <p className="text-xs">
+                  Maximize write-offs, and estimate and save for 1099 taxes
+                </p>
+              </div>
+              <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
+                <p>Bonsai Cash</p>
+                <p className="text-xs">
+                  Manage your money with a no-fee business account
+                </p>
               </div>
             </div>
-            <div className="flex flex-col border-b border-gray-300 cursor-pointer pb-2 px-1 hover:text-gray-900">
+            <div
+              className={`${
+                !openTemplate && 'border-b border-gray-300 pb-4'
+              } flex flex-col transition duration-300  cursor-pointer  mt-5 px-1 hover:text-gray-900`}
+            >
               <div
                 onClick={() => setOpenTemplate(!openTemplate)}
                 className="flex justify-between items-center w-full bg-whtie"
@@ -385,43 +393,43 @@ function Header({}: Props) {
                 <p>Templates</p>
                 <IoChevronDownSharp className="h-5 w-5" />
               </div>
-              <div
-                className={`${
-                  !openTemplate ? 'h-0 opacity-0 -z-10' : 'h-96'
-                } transition-all duration-500 ease-in-out mt-2 space-y-1 bg-whtie`}
-              >
-                <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
-                  <IoChevronForward className="" />
-                  <p className="">Contract Templates</p>
-                </div>
-                <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
-                  <IoChevronForward className="" />
-                  <p className="">Proposal Templates</p>
-                </div>{' '}
-                <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
-                  <IoChevronForward className="" />
-                  <p className="">Invoice Templates</p>
-                </div>{' '}
-                <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
-                  <IoChevronForward className="" />
-                  <p className="">Agreement Templates</p>
-                </div>{' '}
-                <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
-                  <IoChevronForward className="" />
-                  <p className="">Quote Templates</p>
-                </div>{' '}
-                <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
-                  <IoChevronForward className="" />
-                  <p className="">Scope of Work Templates</p>
-                </div>
+            </div>
+            <div
+              className={`${
+                !openTemplate ? 'h-0 opacity-0 -z-10' : 'h-96'
+              } transition-all duration-500 ease-in-out  space-y-1 bg-whtie  border-b border-gray-300`}
+            >
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+                <IoChevronForward className="" />
+                <p className="">Contract Templates</p>
+              </div>
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+                <IoChevronForward className="" />
+                <p className="">Proposal Templates</p>
+              </div>{' '}
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+                <IoChevronForward className="" />
+                <p className="">Invoice Templates</p>
+              </div>{' '}
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+                <IoChevronForward className="" />
+                <p className="">Agreement Templates</p>
+              </div>{' '}
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+                <IoChevronForward className="" />
+                <p className="">Quote Templates</p>
+              </div>{' '}
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+                <IoChevronForward className="" />
+                <p className="">Scope of Work Templates</p>
               </div>
             </div>
-            <div className="flex flex-col border-b border-gray-300 cursor-pointer pb-4 px-1 hover:text-gray-900">
+            <div className="flex flex-col border-b border-gray-300 cursor-pointer mt-5 pb-4 px-1 hover:text-gray-900">
               <div className="flex justify-between items-center w-full">
                 <p>Pricing</p>
               </div>
             </div>
-            <div className="flex flex-col border-b border-gray-300 cursor-pointer pb-4 px-1 hover:text-gray-900">
+            <div className="flex flex-col border-b border-gray-300 cursor-pointer mt-5 pb-4 px-1 hover:text-gray-900">
               <div className="flex justify-between items-center w-full">
                 <p>Reviews</p>
               </div>
