@@ -247,7 +247,7 @@ function Plans({}: Props) {
       </div>
       <div className="flex flex-col items-center justify-center space-y-4 pt-24 pb-12">
         <div className="pb-8">
-          <h1 className="text-xl md:text-3xl font-medium">
+          <h1 className="text-lg md:text-3xl font-medium">
             {monthly
               ? 'Super charge your work with add-ons'
               : 'Customize your workflow with add-ons'}

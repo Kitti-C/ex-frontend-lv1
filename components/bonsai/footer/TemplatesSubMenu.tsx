@@ -10,7 +10,7 @@ function TemplatesSubMenu({ menu, subMenu }: Props) {
   const [openSubMenu, setOpenSubMenu] = useState(false)
 
   return (
-    <div>
+    <div className="">
       <div
         className="bonsaiFooterLink"
         onClick={() => setOpenSubMenu(!openSubMenu)}
@@ -19,7 +19,7 @@ function TemplatesSubMenu({ menu, subMenu }: Props) {
         <IoChevronDownSharp className="text-gray-600 " />
       </div>
 
-      <div className={`${!openSubMenu ? 'hidden' : 'block'} pl-3 my-0.5`}>
+      <div className={`${!openSubMenu ? 'hidden' : 'block'} pl-3 my-0.5  `}>
         {subMenu.map((item) => (
           <p key={item} className="bonsaiFooterLink my-0.5">
             {item}

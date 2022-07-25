@@ -24,7 +24,7 @@ export default function Footer({}: Props) {
 
   return (
     <footer className="bonsaiFooter bg-white text-gray-700 pb-48">
-      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-4 w-[90%] lg:w-[80%] xl:w-[70%] justify-between transition-all  duration-300">
+      <div className="flex flex-col md:flex-row  md:gap-4 w-[90%] lg:w-[80%] xl:w-[70%] justify-between transition-all  duration-300">
         <div className="space-y-8 mt-12  ">
           <div className="space-y-10">
             <h1 className="font-medium">PRODUCT</h1>
@@ -48,7 +48,7 @@ export default function Footer({}: Props) {
           </div>
         </div>
 
-        <div className="space-y-8 mt-12 ">
+        <div className=" space-y-8 mt-12 md:pl-12 ">
           <div className="space-y-10">
             <h1 className="font-medium">FREE RESOURCES</h1>
             <div className="space-y-4 font-light">
@@ -69,7 +69,7 @@ export default function Footer({}: Props) {
               </ul>
             </div>
           </div>
-          <div className="font-light space-y-1.5 ">
+          <div className="font-light space-y-1.5 w-[35vh]">
             <p className="font-medium">Templates</p>
             <TemplatesSubMenu menu="Invoice Templates" subMenu={invoice} />
             <TemplatesSubMenu menu="Proposal Templates" subMenu={proposal} />
@@ -82,7 +82,7 @@ export default function Footer({}: Props) {
             </ul>
           </div>
         </div>
-        <div className="space-y-8 mt-12  md:pl-20">
+        <div className="flex-none space-y-8 mt-12">
           <div className="space-y-10">
             <h1 className="font-medium">BONSAI</h1>
             <div className="space-y-8 font-light">

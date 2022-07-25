@@ -19,7 +19,7 @@ function Index({}: Props) {
 
       <main>
         <section>
-          <div className=" absolute rounded-3xl -top-[43%]  -right-[25%]  md:right-[3%] -rotate-[20deg] w-[90%] h-[65%] bg-[#f2faff] overflow-hidden"></div>
+          <div className=" absolute rounded-3xl -top-[43%]  -right-[19%]  md:right-[3%] -rotate-[20deg] w-[90%] h-[65%] bg-[#f2faff] overflow-hidden"></div>
           <Plans />
         </section>
       </main>
