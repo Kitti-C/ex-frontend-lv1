@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
+import { IoChevronForward } from 'react-icons/io5'
 
 const Home: NextPage = () => {
   return (
@@ -22,36 +24,48 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>Get started </p>
 
-        <div>
-          <p className={styles.lv}>Demo Lv1</p>
-          <div className={styles.grid}>
-            <Link href="/bonsai">
-              <a className={styles.card}>
-                <h2>Bonsai &rarr;</h2>
-                <p>Frontend lv1.</p>
-              </a>
-            </Link>
+        <div className="w-full ">
+          <div className=" flex flex-col justify-center items-center space-y-8">
+            <p className="text-xl">Demo Lv1</p>
+            <div className="grid grid-cols-10 gap-10 w-full">
+              <div className="col-span-2"></div>
+              <div className="col-span-3 border border-gray-200 rounded-lg py-5 px-8 hover:border-[#0070f3] hover:text-[#0070f3] transition-colors duration-200 text-lg">
+                <Link href="/bonsai">
+                  <a className="flex flex-col space-y-4">
+                    <p className="flex items-center gap-2">
+                      Bonsai Frontend lv1. <IoChevronForward />
+                    </p>
 
-            <Link href="/">
-              <a className={styles.card}>
-                <h2>#2 &rarr;</h2>
-                <p>Frontend lv1.</p>
-              </a>
-            </Link>
-
-            <Link href="/">
-              <a className={styles.card}>
-                <h2>#3 &rarr;</h2>
-                <p>Frontend lv1.</p>
-              </a>
-            </Link>
-
-            <Link href="/">
-              <a className={styles.card}>
-                <h2>#4 &rarr;</h2>
-                <p>Frontend lv1.</p>
-              </a>
-            </Link>
+                    <div>
+                      <Image
+                        src="/bonsai.jpg"
+                        alt="bonsai"
+                        width={900}
+                        height={450}
+                        objectFit="contain"
+                      />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <div className="col-span-3 border border-gray-200 rounded-lg py-5 px-8 hover:border-[#0070f3] hover:text-[#0070f3] transition-colors duration-200 text-lg">
+                <Link href="/">
+                  <a className="flex flex-col space-y-4">
+                    <p>Instrument Frontend lv1.</p>
+                    <div>
+                      <Image
+                        src="/bonsai.jpg"
+                        alt="bonsai"
+                        width={900}
+                        height={450}
+                        objectFit="contain"
+                      />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <div className="col-span-2"></div>
+            </div>
           </div>
         </div>
       </main>
