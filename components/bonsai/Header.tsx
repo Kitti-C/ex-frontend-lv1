@@ -62,10 +62,6 @@ function Header({}: Props) {
       } else {
         setIsScrolled(false)
       }
-
-      switch () {
-        default
-      }
     }
 
     window.addEventListener('scroll', handleScroll)
