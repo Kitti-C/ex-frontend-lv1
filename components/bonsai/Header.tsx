@@ -347,7 +347,7 @@ function Header({}: Props) {
             <div
               className={`${
                 !openProduct && 'border-b border-gray-300 pb-4'
-              } flex flex-col transition duration-300  cursor-pointer   px-1 hover:text-gray-900`}
+              } flex flex-col transition duration-300  cursor-pointer pb-2  px-1 hover:text-gray-900`}
             >
               <div
                 onClick={() => setOpenProduct(!openProduct)}
@@ -362,19 +362,19 @@ function Header({}: Props) {
                 !openProduct ? 'h-0 opacity-0 -z-10' : 'h-64'
               } transition-all duration-500 ease-in-out border-b border-gray-300 `}
             >
-              <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
+              <div className="px-2 cursor-pointer py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
                 <p>BonsaiWorkflow</p>
                 <p className="text-xs">
                   Orgabize your business & look profressional
                 </p>
               </div>
-              <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
+              <div className="px-2 cursor-pointer py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
                 <p>Bonsai Tax</p>
                 <p className="text-xs">
                   Maximize write-offs, and estimate and save for 1099 taxes
                 </p>
               </div>
-              <div className="px-2 py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
+              <div className="px-2 cursor-pointer py-4 rounded space-y-2 hover:bg-gray-50 transition duration-300">
                 <p>Bonsai Cash</p>
                 <p className="text-xs">
                   Manage your money with a no-fee business account
@@ -384,7 +384,7 @@ function Header({}: Props) {
             <div
               className={`${
                 !openTemplate && 'border-b border-gray-300 pb-4'
-              } flex flex-col transition duration-300  cursor-pointer  mt-5 px-1 hover:text-gray-900`}
+              } flex flex-col transition duration-300  cursor-pointer  mt-5 pb-2 px-1 hover:text-gray-900`}
             >
               <div
                 onClick={() => setOpenTemplate(!openTemplate)}
@@ -399,27 +399,27 @@ function Header({}: Props) {
                 !openTemplate ? 'h-0 opacity-0 -z-10' : 'h-96'
               } transition-all duration-500 ease-in-out  space-y-1 bg-whtie  border-b border-gray-300`}
             >
-              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300 cursor-pointer">
                 <IoChevronForward className="" />
                 <p className="">Contract Templates</p>
               </div>
-              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300 cursor-pointer">
                 <IoChevronForward className="" />
                 <p className="">Proposal Templates</p>
               </div>{' '}
-              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300 cursor-pointer">
                 <IoChevronForward className="" />
                 <p className="">Invoice Templates</p>
               </div>{' '}
-              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300 cursor-pointer">
                 <IoChevronForward className="" />
                 <p className="">Agreement Templates</p>
               </div>{' '}
-              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300 cursor-pointer">
                 <IoChevronForward className="" />
                 <p className="">Quote Templates</p>
               </div>{' '}
-              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
+              <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300 cursor-pointer">
                 <IoChevronForward className="" />
                 <p className="">Scope of Work Templates</p>
               </div>
