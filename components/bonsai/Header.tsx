@@ -62,6 +62,10 @@ function Header({}: Props) {
       } else {
         setIsScrolled(false)
       }
+
+      switch () {
+        default
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -320,7 +324,7 @@ function Header({}: Props) {
       </div>
       <div
         className={`${
-          openMenu ? 'w-0' : 'w-full  '
+          !openMenu ? 'w-0' : 'w-full  '
         } absolute flex justify-center py-2 top-0 -right-0 bg-white h-screen  transition-all duration-300 ease-out lg:hidden `}
       >
         <div className=" flex flex-col w-[97%]  space-x-1 transition-all duration-300 ">
