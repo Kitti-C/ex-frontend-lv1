@@ -380,15 +380,15 @@ function Header({}: Props) {
             <div className="flex flex-col border-b border-gray-300 cursor-pointer pb-2 px-1 hover:text-gray-900">
               <div
                 onClick={() => setOpenTemplate(!openTemplate)}
-                className="flex justify-between items-center w-full"
+                className="flex justify-between items-center w-full bg-whtie"
               >
                 <p>Templates</p>
                 <IoChevronDownSharp className="h-5 w-5" />
               </div>
               <div
                 className={`${
-                  !openTemplate ? 'h-0 opacity-0 -z-10' : 'h-[42vh]'
-                } transition-all duration-500 ease-in-out mt-2 space-y-1`}
+                  !openTemplate ? 'h-0 opacity-0 -z-10' : 'h-96'
+                } transition-all duration-500 ease-in-out mt-2 space-y-1 bg-whtie`}
               >
                 <div className="flex items-center gap-2  px-2 py-4 rounded  hover:bg-gray-50 transition duration-300">
                   <IoChevronForward className="" />
